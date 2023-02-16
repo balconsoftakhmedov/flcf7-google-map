@@ -5,7 +5,8 @@ var infoWindow;
 var geocoder;
 
 function initMap() {
-	var mapDiv = document.getElementById('google-map');
+	var mapDiv = jQuery('.google-map')[0];
+
 	map = new google.maps.Map(mapDiv, {
 		center: {lat: -34.397, lng: 150.644},
 		zoom: 8
@@ -18,7 +19,7 @@ function initMap() {
 			map: map,
 			position: {lat: -34.397, lng: 150.644}
 		});
-	autocomplete = new google.maps.places.Autocomplete(document.getElementById('google-map-autocomplete'));
+	autocomplete = new google.maps.places.Autocomplete(jQuery('.google-map-autocomplete')[0]);
 	autocomplete.bindTo('bounds', map);
 
 	autocomplete.addListener('place_changed', function () {
@@ -56,7 +57,7 @@ function initMap() {
 					infoWindow.setContent(results[0].formatted_address);
 					infoWindow.open(map, marker);
 				}
-				document.getElementById('google-map-autocomplete').value = results[0].formatted_address;
+				jQuery('.google-map-autocomplete').val(results[0].formatted_address);
 			}
 		});
 	});
