@@ -57,6 +57,18 @@ function custom_clock_form_tag_handler( $tag ) {
         wpcf7_format_atts( $atts ),
         $atts['id']
     );
+ $html .= sprintf(
+        '<div %s id="google-map"></div>
+        <input type="text" class="google-map-autocomplete" id="google-map-autocomplete" />',
+        wpcf7_format_atts( $atts ),
+        $atts['id']
+    );
+ $html .= sprintf(
+        '<div %s id="google-map"></div>
+        <input type="text" class="google-map-autocomplete" id="google-map-autocomplete" />',
+        wpcf7_format_atts( $atts ),
+        $atts['id']
+    );
 
     return $html;
 }
