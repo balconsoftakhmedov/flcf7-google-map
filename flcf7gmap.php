@@ -8,7 +8,7 @@ Version: 1.0
 
 
 function cf7_google_map_enqueue_scripts() {
-	wp_enqueue_script( 'cf7-google-map', plugins_url( 'assets/js/cf7-google-map.js', __FILE__ ), array(  'jquery' ), '1.0', true);
+	wp_enqueue_script( 'cf7-google-map', plugins_url( 'assets/js/flcf7gmap.js', __FILE__ ), array(  'jquery' ), '1.0', true);
     wp_enqueue_script( 'google-maps', 'https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyDXHhQB2qRhJ1HfYfJPKwMESW3q2F4-6Zg&libraries=places&callback=initMap', array('cf7-google-map'), '', true );
 
 }
@@ -52,18 +52,6 @@ function custom_clock_form_tag_handler( $tag ) {
     $atts['style'] = 'width: 100%; height: 300px;';
 
     $html = sprintf(
-        '<div %s id="google-map"></div>
-        <input type="text" class="google-map-autocomplete" id="google-map-autocomplete" />',
-        wpcf7_format_atts( $atts ),
-        $atts['id']
-    );
- $html .= sprintf(
-        '<div %s id="google-map"></div>
-        <input type="text" class="google-map-autocomplete" id="google-map-autocomplete" />',
-        wpcf7_format_atts( $atts ),
-        $atts['id']
-    );
- $html .= sprintf(
         '<div %s id="google-map"></div>
         <input type="text" class="google-map-autocomplete" id="google-map-autocomplete" />',
         wpcf7_format_atts( $atts ),
