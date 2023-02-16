@@ -30,7 +30,7 @@ function flcf7gmap_initMap() {
 		}));
 		flcf7gmap_geocoders.push(new google.maps.Geocoder());
 
-		let autocomplete = new google.maps.places.Autocomplete(jQuery(element).siblings('.flcf7gmap-google-map-autocomplete')[0]);
+		let autocomplete = new google.maps.places.Autocomplete(jQuery(element).siblings('.flcf7gmap-google-map-autocomplete')[eachIndex]);
 		autocomplete.bindTo('bounds', map);
 
 		autocomplete.addListener('place_changed', function () {
