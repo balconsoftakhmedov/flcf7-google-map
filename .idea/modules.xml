@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/cf7-google-map.iml" filepath="$PROJECT_DIR$/.idea/cf7-google-map.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../contact-form-7/.idea/contact-form-7.iml" filepath="$PROJECT_DIR$/../contact-form-7/.idea/contact-form-7.iml" />
     </modules>
   </component>
 </project>
