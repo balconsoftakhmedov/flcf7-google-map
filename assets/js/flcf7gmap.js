@@ -5,8 +5,8 @@ let flcf7gmap_markers = [];
 let flcf7gmap_infoWindows = [];
 let flcf7gmap_geocoders = [];
 
-function flcf7gmap_initMaps() {
-	jQuery('.flcf7gmap-google-map').each(function (index, element) {
+function flcf7gmap_initMap() {
+	jQuery('.flcf7gmap-google-map').each(function (eachIndex, element) {
 		let map = new google.maps.Map(element, {
 			center: {lat: -34.397, lng: 150.644},
 			zoom: 8
@@ -15,12 +15,12 @@ function flcf7gmap_initMaps() {
 		flcf7gmap_maps.push(map);
 		flcf7gmap_markers.push(null);
 
-		let index = flcf7gmap_maps.indexOf(map);
-		if (flcf7gmap_markers[index]) {
-			flcf7gmap_markers[index].setMap(null);
+		let mapIndex = flcf7gmap_maps.indexOf(map);
+		if (flcf7gmap_markers[mapIndex]) {
+			flcf7gmap_markers[mapIndex].setMap(null);
 		}
 
-		flcf7gmap_markers[index] = new google.maps.Marker({
+		flcf7gmap_markers[mapIndex] = new google.maps.Marker({
 			map: map,
 			position: {lat: -34.397, lng: 150.644}
 		});
@@ -39,12 +39,12 @@ function flcf7gmap_initMaps() {
 				return;
 			}
 
-			let index = flcf7gmap_maps.indexOf(map);
-			if (flcf7gmap_markers[index]) {
-				flcf7gmap_markers[index].setMap(null);
+			let mapIndex = flcf7gmap_maps.indexOf(map);
+			if (flcf7gmap_markers[mapIndex]) {
+				flcf7gmap_markers[mapIndex].setMap(null);
 			}
 
-			flcf7gmap_markers[index] = new google.maps.Marker({
+			flcf7gmap_markers[mapIndex] = new google.maps.Marker({
 				map: map,
 				position: place.geometry.location
 			});
@@ -58,13 +58,13 @@ function flcf7gmap_initMaps() {
 		});
 
 		google.maps.event.addListener(map, 'click', function (event) {
-			let index = flcf7gmap_maps.indexOf(map);
-			flcf7gmap_markers[index].setPosition(event.latLng);
-			flcf7gmap_geocoders[index].geocode({'latLng': event.latLng}, function (results, status) {
+			let mapIndex = flcf7gmap_maps.indexOf(map);
+			flcf7gmap_markers[mapIndex].setPosition(event.latLng);
+			flcf7gmap_geocoders[mapIndex].geocode({'latLng': event.latLng}, function (results, status) {
 				if (status == google.maps.GeocoderStatus.OK) {
 					if (results[0]) {
-						flcf7gmap_infoWindows[index].setContent(results[0].formatted_address);
-						flcf7gmap_infoWindows[index].open(map, flcf7gmap_markers[index]);
+						flcf7gmap_infoWindows[mapIndex].setContent(results[0].formatted_address);
+						flcf7gmap_infoWindows[mapIndex].open(map, flcf7gmap_markers[mapIndex]);
 					}
 					jQuery(element).siblings('.flcf7gmap-google-map-autocomplete').val(results[0].formatted_address);
 				}

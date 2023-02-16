@@ -47,13 +47,13 @@ function custom_clock_form_tag_handler( $tag ) {
  	  $tag = new WPCF7_FormTag( $tag );
 
     $atts = array();
-    $atts['class'] = $tag->get_class_option( 'google-map' );
+    $atts['class'] = $tag->get_class_option( 'flcf7gmap-google-map' );
     $atts['id'] = $tag->get_option( 'id', 'id', true );
     $atts['style'] = 'width: 100%; height: 300px;';
 
     $html = sprintf(
-        '<div %s id="google-map"></div>
-        <input type="text" class="google-map-autocomplete" id="google-map-autocomplete" />',
+        '<div %s id="flcf7gmap-google-map"></div>
+        <input type="text" class="flcf7gmap-google-map-autocomplete" id="flcf7gmap-google-map-autocomplete" />',
         wpcf7_format_atts( $atts ),
         $atts['id']
     );
