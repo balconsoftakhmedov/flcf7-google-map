@@ -56,10 +56,6 @@ function flcf7gmap_map_form_tag_handler( $tag ) {
 		$validation_error
 	);
 
-
-
-
-
 	return $html;
 }
 
