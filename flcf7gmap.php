@@ -48,8 +48,9 @@ function flcf7gmap_map_form_tag_handler( $tag ) {
 	$atts_complete['class'] = $tag->get_class_option( $class );
 	$html                   = sprintf(
 		'<div %s></div>
-		<span class="wpcf7-form-control-wrap" data-name="%s">
-		<input type="text" class="flcf7gmap-google-map-autocomplete" %s autocomplete="on" />%4$s</span>',
+		
+		<input type="text" class="flcf7gmap-google-map-autocomplete" %3$s autocomplete="on" />
+		<span class="wpcf7-form-control-wrap" data-name="%2$s">%4$s</span>',
 		wpcf7_format_atts( $atts ),
 		esc_attr( $tag->name ),
 		wpcf7_format_atts( $atts_complete ),
