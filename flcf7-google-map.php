@@ -1,8 +1,8 @@
 <?php
 /*
-Plugin Name: CF7 Google Map
+Plugin Name: Flance CF7 Google Map
 Description: Adds a Google Map form field to Contact Form 7
-Author: Your Name
+Author: flance.info
 Version: 1.0
 */
 
