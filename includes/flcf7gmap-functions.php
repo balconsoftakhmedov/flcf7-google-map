@@ -8,8 +8,6 @@
  */
 
 
-
-
 add_action( 'wpcf7_init', 'flcf7gmap_add_form_tag_map' );
 function flcf7gmap_add_form_tag_map() {
 	wpcf7_add_form_tag( array( 'cf7_gmap', 'cf7_gmap*' ), 'flcf7gmap_map_form_tag_handler', array( 'name-attr' => true ) );

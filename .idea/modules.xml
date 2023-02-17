@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/cf7-google-map.iml" filepath="$PROJECT_DIR$/.idea/cf7-google-map.iml" />
       <module fileurl="file://$PROJECT_DIR$/../contact-form-7/.idea/contact-form-7.iml" filepath="$PROJECT_DIR$/../contact-form-7/.idea/contact-form-7.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../../../freigty/wp-content/plugins/freight-custom-post-type/.idea/freight-custom-post-type.iml" filepath="$PROJECT_DIR$/../../../../../freigty/wp-content/plugins/freight-custom-post-type/.idea/freight-custom-post-type.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../../../freigty/wp-content/themes/freighty/.idea/freighty.iml" filepath="$PROJECT_DIR$/../../../../../freigty/wp-content/themes/freighty/.idea/freighty.iml" />
     </modules>
   </component>
 </project>
